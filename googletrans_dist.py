@@ -18,3 +18,4 @@ if __name__ == '__main__':
     input_text = str(input("Enter text to be distorted: "))
     distorted = distort(input_text, 10)
     print(distorted)
+    
