@@ -9,7 +9,7 @@ def distort(input_text: str, iterations=10) -> str:
 
     for i in range(iterations):
         code, name = random.choice(list(lang_codes.items()))
-        print(f"{i}: {name}")
+        print(f"{i}: {name} - {output[:20]}...")
         output = translator.translate(output, dest=code).text
     output = translator.translate(output, dest=input_lang).text
     return output
@@ -18,4 +18,3 @@ if __name__ == '__main__':
     input_text = str(input("Enter text to be distorted: "))
     distorted = distort(input_text, 10)
     print(distorted)
-    
